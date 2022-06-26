@@ -1,5 +1,7 @@
 # REST API
- _کار با REST API در فریمورک لاراول_
+Work with REST API in Laravel framework
+
+<br>
 
 #### Get all products
 ```sh
@@ -10,7 +12,7 @@ fetch('http://127.0.0.1:8000/api/products')
 ##### Output
 ![Output](https://github.com/effati78/REST_API_Laravel8/blob/master/images/products.png)
 
-<br><br>
+<br> <hr>
 
 #### Get product by ID
 ```sh
@@ -21,7 +23,7 @@ fetch('http://127.0.0.1:8000/api/products/2')
 ##### Output
 ![Output](https://github.com/effati78/REST_API_Laravel8/blob/master/images/product-id.png)
 
-<br><br>
+<br> <hr>
 
 #### Get all sponsors
 ```sh
@@ -32,7 +34,7 @@ fetch('http://127.0.0.1:8000/api/sponsors')
 ##### Output
 ![Output](https://github.com/effati78/REST_API_Laravel8/blob/master/images/sponsors.png)
 
-<br><br>
+<br> <hr>
 
 #### Post comments
 ```sh
@@ -57,7 +59,7 @@ fetch('http://localhost:8000/api/comments/1', {
 }
 ```
 
-<br><br>
+<br> <hr>
 
 #### Get comments by ID
 ```sh
