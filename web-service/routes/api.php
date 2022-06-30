@@ -18,10 +18,14 @@ use App\Http\Controllers\SponsorController;
 |
 */
 
-Route::get('/products', [ProductController::class ,'index'])->name('get.products');
-Route::get('/products/feature', [ProductController::class, 'get_feature'])->name('get.products.feature');
-Route::get('/products/{id}', [ProductController::class, 'get_product'])->name('get.products.details');
-Route::post('/comments/{product_id}', [CommentController::class, 'store'])->name('add.comments');
-Route::get('/comments/{product_id}', [CommentController::class, 'index'])->name('get.comments');
-Route::get('/sponsors', [SponsorController::class, 'index'])->name('get.sponsor');
+Route::get('/products', [ProductController::class, 'index'])->name('products.get');
+Route::post('/products', [ProductController::class, 'add_product'])->name('products.add');
+Route::get('/products/feature', [ProductController::class, 'get_feature'])->name('products.feature.get');
+Route::get('/products/{id}', [ProductController::class, 'get_product'])->name('products.details.get');
+Route::delete('/products/{product_id}', [ProductController::class, 'delete_product'])->name('products.delete');
+Route::put('/products/{product_id}', [ProductController::class, 'edit_product'])->name('products.edit');
 
+Route::post('/comments/{product_id}', [CommentController::class, 'add_comment'])->name('comments.add');
+Route::get('/comments/{product_id}', [CommentController::class, 'index'])->name('comments.get');
+
+Route::get('/sponsors', [SponsorController::class, 'index'])->name('sponsor.get');
