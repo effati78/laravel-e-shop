@@ -20,7 +20,7 @@ use App\Http\Controllers\SponsorController;
 
 Route::get('/products', [ProductController::class, 'index'])->name('products.get');
 Route::post('/products', [ProductController::class, 'add_product'])->name('products.add');
-Route::get('/products/feature', [ProductController::class, 'get_feature'])->name('products.feature.get');
+Route::get('/products/featured', [ProductController::class, 'get_feature'])->name('products.feature.get');
 Route::get('/products/{id}', [ProductController::class, 'get_product'])->name('products.details.get');
 Route::delete('/products/{product_id}', [ProductController::class, 'delete_product'])->name('products.delete');
 Route::put('/products/{product_id}', [ProductController::class, 'edit_product'])->name('products.edit');
