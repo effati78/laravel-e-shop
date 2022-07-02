@@ -28,4 +28,7 @@ Route::put('/products/{product_id}', [ProductController::class, 'edit_product'])
 Route::post('/comments/{product_id}', [CommentController::class, 'add_comment'])->name('comments.add');
 Route::get('/comments/{product_id}', [CommentController::class, 'index'])->name('comments.get');
 
-Route::get('/sponsors', [SponsorController::class, 'index'])->name('sponsor.get');
+Route::get('/sponsors', [SponsorController::class, 'index'])->name('sponsors.get');
+Route::post('/sponsors', [SponsorController::class, 'add_sponsor'])->name('sponsors.add');
+Route::delete('/sponsors/{id}', [SponsorController::class, 'delete_sponsor'])->name('sponsors.delete');
+Route::put('/sponsors/{id}', [SponsorController::class, 'edit_sponsor'])->name('sponsors.edit');

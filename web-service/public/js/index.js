@@ -23,6 +23,21 @@ let data = {
         }
     ]
 }</code></pre>`,
+        post: `<pre><code class="language-javascript h-400">{
+    "status": 201,
+    "success": true,
+    "message": "Adding Sponsor Done"
+}</code></pre>`,
+        delete: `<pre><code class="language-javascript h-400">{
+    "status": 202,
+    "success": true,
+    "message": "Deleting Sponsor Done"
+}</code></pre>`,
+        update: `<pre><code class="language-javascript h-400">{
+    "status": 200,
+    "success": true,
+    "message": "Editing Sponsor Done"
+}</code></pre>`,
     },
     comments: {
         getById: `<pre><code class="language-javascript h-400">{

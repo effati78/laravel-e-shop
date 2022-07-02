@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Laravel Web Service | REST API</title>
+    <link rel="icon" type="image/png" href="/images/shop.png"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css" />
@@ -162,6 +163,55 @@
     .then(res => res.json())
     .then(json => console.log(json))</code></pre>
                 <button data-type="sponsors" data-status="getAll" class="btn btn-success border-0 mb-3 px-4">Try it</button>
+                <div></div>
+            </div>
+
+            <div class="col-12">
+                <h5 class="mt-5 mb-0">Post sponsor</h5>
+                <div class="d-flex align-items-center justify-content-end"><span
+                        class="badge badge-success border-0 py-1 px-2">POST</span></div>
+                <pre><code class="language-javascript hljs">fetch('http://localhost:8000/api/sponsors', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: "فروشگاه ساز وب از تو",
+      url: "https://webazto.ir",
+      img: "https://avatars.githubusercontent.com/u/56348113?v=4",
+    })
+  })
+    .then(res => res.json())
+    .then(json => console.log(json))</code></pre>
+                <button data-type="sponsors" data-status="post" class="btn btn-success border-0 mb-3 px-4">Try it</button>
+                <div></div>
+            </div>
+
+            <div class="col-12">
+                <h5 class="mt-5 mb-0">Delete sponsor by ID</h5>
+                <div class="d-flex align-items-center justify-content-end"><span
+                        class="badge badge-danger border-0 py-1 px-2">DELETE</span></div>
+                <pre><code class="language-javascript hljs">fetch('http://127.0.0.1:8000/api/sponsors/2')
+    .then(res => res.json())
+    .then(json => console.log(json))</code></pre>
+                <button  data-type="sponsors" data-status="delete" class="btn btn-success border-0 mb-3 px-4">Try it</button>
+                <div></div>
+            </div>
+
+            <div class="col-12">
+                <h5 class="mt-5 mb-0">Update sponsor by ID</h5>
+                <div class="d-flex align-items-center justify-content-end"><span
+                        class="badge badge-warning border-0 py-1 px-2">PUT</span></div>
+                <pre><code class="language-javascript hljs">fetch('http://localhost:8000/api/sponsors/1', {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: "شرکت برنامه نویسی عصر شگرف",
+      url: "https://singularity-age.com/",
+      img: "https://singularity-age.com/wp-content/uploads/2021/08/singularity-age-logo.png",
+    })
+  })
+    .then(res => res.json())
+    .then(json => console.log(json))</code></pre>
+                <button  data-type="sponsors" data-status="update" class="btn btn-success border-0 mb-3 px-4">Try it</button>
                 <div></div>
             </div>
         </div>
