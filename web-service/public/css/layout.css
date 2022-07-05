@@ -1,0 +1,50 @@
+.nav-item.active a {
+    border-radius: 50px;
+    background-color: #fff;
+    color: #000 !important;
+}
+
+.nav-item {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.nav-item a {
+    padding: 5px 10px !important;
+}
+
+main {
+    min-height: 70vh;
+}
+
+.text-ellipsis-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.gap-15 {
+    row-gap: 15px;
+}
+
+.font-sm {
+    font-size: 0.8rem !important;
+}
+
+.font-md {
+    font-size: 0.9rem !important;
+}
+
+.pre {
+    white-space: pre;
+}

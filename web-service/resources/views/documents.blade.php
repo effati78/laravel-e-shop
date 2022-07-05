@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
+@section('site_title', 'مستندات')
 
-<head>
-    <meta charset="UTF-8">
-    <title>Laravel Web Service | REST API</title>
-    <link rel="icon" type="image/png" href="/images/shop.png"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
+@section('site_css_files')
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css" />
     <link rel="stylesheet" href="/css/dracula.css">
-    <link rel="stylesheet" href="/css/index.css" />
-</head>
+    <link rel="stylesheet" href="/css/documents.css" />
+@endsection
 
-<body>
-    <div class="container my-5">
+@section('site_content')
+    <div class="documents">
         <h3 class="font-weight-bold">How to use it?</h3>
         <p>This is a fairly simple web service for a store website. using api is very simple and need no authentication,
             this type is the best choice to working with if you start using api recently.</p>
@@ -41,7 +36,8 @@
                 <pre><code class="language-javascript hljs">fetch('http://127.0.0.1:8000/api/products/2')
     .then(res => res.json())
     .then(json => console.log(json))</code></pre>
-                <button data-type="products" data-status="getById" class="btn btn-success border-0 mb-3 px-4">Try it</button>
+                <button data-type="products" data-status="getById" class="btn btn-success border-0 mb-3 px-4">Try
+                    it</button>
                 <div></div>
             </div>
 
@@ -52,7 +48,8 @@
                 <pre><code class="language-javascript hljs">fetch('http://127.0.0.1:8000/api/products/featured')
     .then(res => res.json())
     .then(json => console.log(json))</code></pre>
-                <button  data-type="products" data-status="getFeatured" class="btn btn-success border-0 mb-3 px-4">Try it</button>
+                <button data-type="products" data-status="getFeatured" class="btn btn-success border-0 mb-3 px-4">Try
+                    it</button>
                 <div></div>
             </div>
 
@@ -63,7 +60,7 @@
                 <pre><code class="language-javascript hljs">fetch('http://127.0.0.1:8000/api/products/2')
     .then(res => res.json())
     .then(json => console.log(json))</code></pre>
-                <button  data-type="products" data-status="delete" class="btn btn-success border-0 mb-3 px-4">Try it</button>
+                <button data-type="products" data-status="delete" class="btn btn-success border-0 mb-3 px-4">Try it</button>
                 <div></div>
             </div>
 
@@ -76,7 +73,7 @@
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       title: "آیفون ۱3پرو اپل iPhone 13 Pro 256GB NOT ACTIVE",
-      content: "اندازه نمایشگر:  6.1 اینچ\r\nرزولوشن: 1170×2532\r\nدوربین‌های اصلی: 12+12+12\r\nدوربین سلفی: 12\r\nپردازنده: A15\r\nحافظه: 256 گیگابایت\r\nرم: 6 گیگابایت",
+      content: "اندازه نمایشگر:  6.1 اینچ,رزولوشن: 1170×2532,دوربین‌های اصلی: 12+12+12,دوربین سلفی: 12,پردازنده: A15,حافظه: 256 گیگابایت,رم: 6 گیگابایت",
       image: "https://itech.ir/wp-content/uploads/2021/09/%D8%A2%DB%8C%D9%81%D9%88%D9%86-%DB%B13%D9%BE%D8%B1%D9%88-%D8%A7%D9%BE%D9%84-iPhone-13-Pro-128GB-570x570.jpg",
       price: "49,500,000 تومان",
       score: "4",
@@ -85,7 +82,7 @@
   })
     .then(res => res.json())
     .then(json => console.log(json))</code></pre>
-                <button  data-type="products" data-status="update" class="btn btn-success border-0 mb-3 px-4">Try it</button>
+                <button data-type="products" data-status="update" class="btn btn-success border-0 mb-3 px-4">Try it</button>
                 <div></div>
             </div>
 
@@ -98,7 +95,7 @@
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       title: "مک بوک ایر 13 اینچی اپل MacBook Air MGN63 2020",
-      content: "ظرفیت حافظه رم: 8 گیگابایت\nظرفیت حافظه داخلی: 256 گیگابایت\nسازنده پردازنده گرافیکی: Apple\nاندازه صفحه نمایش: 13.3 اینچ\nطبقه‌بندی: کاربری عمومی ، باریک و سبک\nسری پردازنده: M1\nنوع حافظه رم: Unified\nدقت صفحه نمایش: QHD|2560×1600\nصفحه نمایش مات: خیر\nصفحه نمایش لمسی: خیر\nسیستم عامل: Apple Mac OS\nپورت HDMI: ندارد",
+      content: "ظرفیت حافظه رم: 8 گیگابایت,ظرفیت حافظه داخلی: 256 گیگابایت,سازنده پردازنده گرافیکی: Apple,اندازه صفحه نمایش: 13.3 اینچ,طبقه‌بندی: کاربری عمومی ، باریک و سبک,سری پردازنده: M1,نوع حافظه رم: Unified,دقت صفحه نمایش: QHD|2560×1600,صفحه نمایش مات: خیر,صفحه نمایش لمسی: خیر,سیستم عامل: Apple Mac OS,پورت HDMI: ندارد",
       image: "https://itech.ir/wp-content/uploads/2021/01/%D9%84%D9%BE-%D8%AA%D8%A7%D9%BE-13-%D8%A7%DB%8C%D9%86%DA%86%DB%8C-%D8%A7%D9%BE%D9%84-%D9%85%D8%AF%D9%84-MacBook-Air-MGN63-2020.jpg",
       price: "30,650,000 تومان",
       score: "5",
@@ -123,7 +120,8 @@
                 <pre><code class="language-javascript hljs">fetch('http://127.0.0.1:8000/api/comments/3')
     .then(res => res.json())
     .then(json => console.log(json))</code></pre>
-                <button data-type="comments" data-status="getById" class="btn btn-success border-0 mb-3 px-4">Try it</button>
+                <button data-type="comments" data-status="getById" class="btn btn-success border-0 mb-3 px-4">Try
+                    it</button>
                 <div></div>
             </div>
 
@@ -181,7 +179,8 @@
   })
     .then(res => res.json())
     .then(json => console.log(json))</code></pre>
-                <button data-type="sponsors" data-status="post" class="btn btn-success border-0 mb-3 px-4">Try it</button>
+                <button data-type="sponsors" data-status="post" class="btn btn-success border-0 mb-3 px-4">Try
+                    it</button>
                 <div></div>
             </div>
 
@@ -192,7 +191,8 @@
                 <pre><code class="language-javascript hljs">fetch('http://127.0.0.1:8000/api/sponsors/2')
     .then(res => res.json())
     .then(json => console.log(json))</code></pre>
-                <button  data-type="sponsors" data-status="delete" class="btn btn-success border-0 mb-3 px-4">Try it</button>
+                <button data-type="sponsors" data-status="delete" class="btn btn-success border-0 mb-3 px-4">Try
+                    it</button>
                 <div></div>
             </div>
 
@@ -211,26 +211,15 @@
   })
     .then(res => res.json())
     .then(json => console.log(json))</code></pre>
-                <button  data-type="sponsors" data-status="update" class="btn btn-success border-0 mb-3 px-4">Try it</button>
+                <button data-type="sponsors" data-status="update" class="btn btn-success border-0 mb-3 px-4">Try
+                    it</button>
                 <div></div>
             </div>
         </div>
     </div>
+@endsection
 
-    <footer class="text-center text-lg-start">
-        <div class="text-center p-3 text-dark">
-            © 2022 Copyright - Made with ♥ by
-            <a class="text-dark" href="https://github.com/effati78">Reza</a>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
-    </script>
+@section('site_js_files')
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
-    <script src="/js/index.js"></script>
-</body>
-
-</html>
+    <script src="/js/documents.js"></script>
+@endsection

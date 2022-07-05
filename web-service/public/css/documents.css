@@ -1,0 +1,45 @@
+@font-face {
+    font-family: IRANSansWeb;
+    src: url('/font/IRANSansWeb/IRANSansWeb\(FaNum\).ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header *, footer * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    text-align: right;
+    font-family: IRANSansWeb, Tahoma;
+}
+
+.badge {
+    border-radius: 0;
+}
+
+a {
+    text-decoration: underline;
+}
+
+img {
+    width: 30px;
+}
+
+h3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.h-400 {
+    max-height: 400px;
+    overflow-y: auto;
+}

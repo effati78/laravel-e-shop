@@ -203,3 +203,5 @@ $("button").click(function (e) {
         });
     }, 700);
 });
+
+$('.documents').addClass('active');
