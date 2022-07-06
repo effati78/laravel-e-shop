@@ -15,20 +15,20 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('products');
-});
+})->name('home');
 
 Route::get('/documents', function () {
     return view('documents');
-});
+})->name('documents');
 
 Route::get('/featured', function () {
     return view('featured');
-});
+})->name('featured');
 
-Route::get('/products/1', function () {
+Route::get('/products/{id}', function () {
     return view('products_show');
 });
 
 Route::get('/sponsors', function () {
     return view('sponsors');
-});
+})->name('sponsors');

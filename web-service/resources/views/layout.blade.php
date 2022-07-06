@@ -24,16 +24,16 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarExample01">
                     <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
                         <li class="nav-item home">
-                            <a class="nav-link" aria-current="page" href="#">خانه</a>
+                            <a class="nav-link" aria-current="page" href="{{route('home')}}">خانه</a>
                         </li>
                         <li class="nav-item featured">
-                            <a class="nav-link" href="#">محصولات ویژه</a>
+                            <a class="nav-link" href="{{route('featured')}}">محصولات ویژه</a>
                         </li>
                         <li class="nav-item sponsors">
-                            <a class="nav-link" href="#">حامیان مالی</a>
+                            <a class="nav-link" href="{{route('sponsors')}}">حامیان مالی</a>
                         </li>
                         <li class="nav-item documents">
-                            <a class="nav-link" href="#">مستندات</a>
+                            <a class="nav-link" href="{{route('documents')}}">مستندات</a>
                         </li>
                     </ul>
                 </div>

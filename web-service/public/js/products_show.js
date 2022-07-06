@@ -1,6 +1,7 @@
 let product_cnt = $('.product_cnt');
 let product_api = '';
-fetch('http://127.0.0.1:8000/api/products/1')
+let id = window.location.href.slice(31);
+fetch(`http://127.0.0.1:8000/api/products/${id}`)
     .then(res => res.json())
     .then(function(json) {
         product_api = `<div class="col-12 row p-2 bg-white border rounded">
@@ -23,7 +24,7 @@ fetch('http://127.0.0.1:8000/api/products/1')
 
 let comments_cnt = $(".comments_cnt");
 let comments_api = "";
-fetch("http://localhost:8000/api/comments/1")
+fetch(`http://localhost:8000/api/comments/${id}`)
     .then((res) => res.json())
     .then(function (json) {
         for (let i = 0; i < json.comments.length; i++) {
