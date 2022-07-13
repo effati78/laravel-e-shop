@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 26, 2022 at 07:51 PM
+-- Generation Time: Jul 07, 2022 at 02:23 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -139,7 +139,7 @@ CREATE TABLE `sponsors` (
 
 INSERT INTO `sponsors` (`id`, `name`, `url`, `img`, `created_at`, `updated_at`) VALUES
 (1, 'فروشگاه ساز وب از تو', 'https://webazto.ir', 'https://webazto.ir/img/spinner-webAzToLOGO.webp', '2022-06-01 17:44:56', '2022-06-03 17:44:56'),
-(2, 'شرکت برنامه نویسی عصر شگرف', 'https://singularity-age.com/', 'https://singularity-age.com/wp-content/uploads/2021/08/singularity-age-logo.png', '2022-06-06 17:47:45', '2022-06-03 17:47:45');
+(2, 'شرکت برنامه نویسی عصر شگرف', 'https://singularity-age.com/', 'https://singularity-age.com/wp-content/uploads/2021/08/cropped-asreshegerf-favicon1-1-192x192.png', '2022-06-06 17:47:45', '2022-06-03 17:47:45');
 
 --
 -- Indexes for dumped tables
