@@ -1,0 +1,54 @@
+body {
+    background-image: url("/images/bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.form-box {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 85px rgb(0 0 0 / 15%);
+}
+
+.login-form input.form-control {
+    outline: none;
+    background-color: #f2f2f2;
+    padding: 24px 13px;
+    border-radius: 0;
+    font-size: 14px;
+    transition: all 0.6s;
+    border: 2px solid transparent;
+}
+.login-form input.form-control:focus {
+    color: #000;
+    background-color: #fff;
+    border-color: #7cbb59;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #7bbb5959;
+}
+
+.login-form .btn {
+    background-color: #7cbb59;
+    width: 100%;
+    color: #fff;
+    border-radius: 0;
+    padding: 12px 13px;
+}
+
+.login-form .btn:active,
+.login-form .btn:hover {
+    box-shadow: 0 0 0 0;
+    background-color: #43a047;
+    outline: none;
+}
+.create-account {
+    font-size: 13px;
+}
+
+.create-account a {
+    color: #4caf50;
+}
+
+h5, strong {
+    font-weight: 900;
+}

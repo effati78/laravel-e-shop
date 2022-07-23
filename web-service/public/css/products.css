@@ -1,19 +1,3 @@
-@font-face {
-    font-family: IRANSansWeb;
-    src: url('/font/IRANSansWeb/IRANSansWeb\(FaNum\).ttf');
-    font-style: normal;
-    font-weight: normal;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    direction: rtl;
-    text-align: right;
-    font-family: IRANSansWeb, Tahoma;
-}
-
 .card-img {
     width: 100%;
     height: 220px;

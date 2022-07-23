@@ -32,3 +32,7 @@ Route::get('/products/{id}', function () {
 Route::get('/sponsors', function () {
     return view('sponsors');
 })->name('sponsors');
+
+Route::get('/login', function () {
+    return view('login');
+})->name('login');

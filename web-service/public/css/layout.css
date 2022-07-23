@@ -14,7 +14,7 @@
 }
 
 main {
-    min-height: 70vh;
+    min-height: 75vh;
 }
 
 .text-ellipsis-3 {
@@ -47,4 +47,11 @@ main {
 
 .pre {
     white-space: pre;
+}
+
+.login-btn i, .login-btn svg {
+    font-size: 1.2rem;
+    position: relative;
+    top: 5px;
+    margin-left: 5px;
 }

@@ -6,7 +6,9 @@
     <link rel="icon" type="image/png" href="/images/shop.png" />
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+        type="text/css" />
     <link rel="stylesheet" href="/css/layout.css" />
     @yield('site_css_files')
     <title>@yield('site_title')</title>
@@ -14,8 +16,9 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
+        <nav
+            class="container-fluid d-flex align-items-center justify-content-between navbar navbar-expand-lg navbar-dark bg-dark">
+            <div>
                 <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
                     data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -24,20 +27,28 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarExample01">
                     <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
                         <li class="nav-item home">
-                            <a class="nav-link" aria-current="page" href="{{route('home')}}">خانه</a>
+                            <a class="nav-link" aria-current="page" href="{{ route('home') }}">خانه</a>
                         </li>
                         <li class="nav-item featured">
-                            <a class="nav-link" href="{{route('featured')}}">محصولات ویژه</a>
+                            <a class="nav-link" href="{{ route('featured') }}">محصولات ویژه</a>
                         </li>
                         <li class="nav-item sponsors">
-                            <a class="nav-link" href="{{route('sponsors')}}">حامیان مالی</a>
+                            <a class="nav-link" href="{{ route('sponsors') }}">حامیان مالی</a>
                         </li>
                         <li class="nav-item documents">
-                            <a class="nav-link" href="{{route('documents')}}">مستندات</a>
+                            <a class="nav-link" href="{{ route('documents') }}">مستندات</a>
                         </li>
                     </ul>
                 </div>
             </div>
+            {{-- <a href="{{route("login")}}" class="btn btn-light btn-sm login-btn">
+                <i class="fas fa-sign-in"></i>
+                ورود به حساب
+            </a> --}}
+            <a href="{{route("login")}}" title="برای خروج از حساب کاربری کلیک کنید" class="btn btn-light btn-sm">
+                <i class="fas fa-user"></i>
+                سلام رضا عزیز - <span class="badge badge-dark">ادمین</span>    
+            </a>
         </nav>
     </header>
 

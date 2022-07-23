@@ -1,0 +1,51 @@
+@font-face {
+    font-family: IRANSansWeb;
+    src: url('/fonts/IRANSansWeb/IRANSansWeb_Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: IRANSansWeb;
+    src: url('/fonts/IRANSansWeb/IRANSansWeb_UltraLight.ttf');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: IRANSansWeb;
+    src: url('/fonts/IRANSansWeb/IRANSansWeb_Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: IRANSansWeb;
+    src: url('/fonts/IRANSansWeb/IRANSansWeb\(FaNum\).ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: IRANSansWeb;
+    src: url('/fonts/IRANSansWeb/IRANSansWeb_Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: IRANSansWeb;
+    src: url('/fonts/IRANSansWeb/IRANSansWeb_Bold.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: IRANSansWeb;
+    src: url('/fonts/IRANSansWeb/IRANSansWeb_Black.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    direction: rtl;
+    text-align: right;
+    font-family: IRANSansWeb, Tahoma;
+}

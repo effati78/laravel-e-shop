@@ -2,6 +2,7 @@
 @section('site_title', 'محصولات ویژه')
 
 @section('site_css_files')
+    <link rel="stylesheet" href="/css/font.css" />
     <link rel="stylesheet" href="/css/products.css" />
 @endsection
 
