@@ -5,7 +5,11 @@ fetch("http://localhost:8000/api/sponsors")
     .then(function (json) {
         for (let i = 0; i < json.sponsors.length; i++) {
             sponsors_api += `<div class="col-3">
-                                <div class="card position-relative">
+                                <div class="card position-relative overflow-hidden">
+                                    <div class="bg-dark d-flex align-items-center justify-content-between py-2 px-3">
+                                        <button class="btn btn-sm btn-warning badge" title="ویرایش"><i class="far fa-edit"></i> ویرایش</button>
+                                        <button class="btn btn-sm btn-danger badge" title="حذف"><i class="far fa-trash-alt"></i> حذف</button>
+                                    </div>
                                     <div class="card-img">
                                         <img class="card-img-top img-fluid" src="${json.sponsors[i].img}"
                                             alt="Card image cap" />

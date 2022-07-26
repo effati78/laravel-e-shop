@@ -13,10 +13,16 @@ fetch(`http://127.0.0.1:8000/api/products/${id}`)
                             </div>
                             <div class="align-items-center align-content-center col-md-3 border-right mt-1">
                                 <div class="d-flex flex-row align-items-center justify-content-center">
-                                    <h4 class="mr-1 text-center d-block mb-4">${json.product.price}</h4>
+                                    <h4 class="mr-1 text-center d-block mb-4 price">${json.product.price}</h4>
                                 </div>
-                                <h6 class="${json.product.isFeatured == 0 ? 'd-none' : ''} text-white bg-success p-2 text-center">محصول ویژه</h6>
-                                <h6 class="text-dark bg-warning p-2 mt-2 text-center">امتیاز محصول ${json.product.score}</h6>
+                                <h6 class="${json.product.isFeatured == 0 ? 'd-none' : ''} text-white bg-success p-2 text-center"><i class="far fa-gift"></i> محصول ویژه</h6>
+                                <h6 class="bg-info text-white p-2 mt-2 text-center"><i class="far fa-star"></i> امتیاز محصول ${json.product.score}</h6>
+                                
+                                <hr />
+                                <div class="d-flex align-items-center justify-content-between admin-btnS">
+                                    <button class="btn btn-sm btn-warning" title="ویرایش"><i class="far fa-edit"></i> ویرایش</button>
+                                    <button class="btn btn-sm btn-danger" title="حذف"><i class="far fa-trash-alt"></i> حذف</button>
+                                </div>
                             </div>
                         </div>`;
         product_cnt.html(product_api);
@@ -40,7 +46,7 @@ fetch(`http://localhost:8000/api/comments/${id}`)
                                         <h5 class="mr-1 text-center font-md">${json.comments[i].sender_email}</h5>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <h6 class="badge badge-dark p-2 mt-2 text-center font-sm">این کاربر به محصول <b class="bg-warning px-2 text-dark rounded">امتیاز ${json.comments[i].score}</b> داده است</h6>
+                                        <h6 class="badge badge-dark p-2 mt-2 text-center font-sm font-weight-light">امتیاز کاربر: <b class="text-warning font-weight-bold"> ${json.comments[i].score} <i class="fas fa-star"></i></b></h6>
                                     </div>
                                 </div>
                             </div>`;

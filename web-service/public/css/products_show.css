@@ -16,3 +16,31 @@
     margin-right: 0 !important;
     margin-left: 0 !important;
 }
+
+.admin-btnS {
+    gap: 7px;
+}
+
+.admin-btnS button {
+    flex-grow: 1;
+}
+
+.price {
+    font-weight: 900;
+}
+
+.font-weight-900 {
+    font-weight: 900;
+}
+
+input::placeholder, textarea::placeholder {
+    font-size: 0.8rem;
+}
+
+button[type="submit"], label {
+    font-size: 0.9rem;
+}
+
+textarea {
+    min-height: 150px;
+}

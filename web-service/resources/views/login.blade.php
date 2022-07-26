@@ -27,7 +27,8 @@
             <div class="col-md-5 col-11 p-5 form-box">
                 <p class="text-center mb-4 text-white">شما با نام کاربری <strong>رضا عفتی مقدم</strong> و نقش <strong>ادمین</strong> وارد سامانه شده‌اید.</p>
                 <div class="d-flex align-items-center justify-content-center">
-                    <a class="btn btn-danger btn-sm">خروج از حسا کاربری</a>
+                    <a class="btn btn-danger btn-sm logout"><i class="fas fa-sign-out"></i>
+                        خروج از حسا کاربری</a>
                 </div>
             </div>
         </div>

@@ -55,3 +55,7 @@ main {
     top: 5px;
     margin-left: 5px;
 }
+
+.overflow-hidden {
+    overflow: hidden;
+}

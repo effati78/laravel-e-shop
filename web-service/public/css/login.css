@@ -52,3 +52,8 @@ body {
 h5, strong {
     font-weight: 900;
 }
+
+.logout i, .logout svg {
+    position: relative;
+    top: 2px;
+}

@@ -41,11 +41,13 @@
                     </ul>
                 </div>
             </div>
+            
             {{-- <a href="{{route("login")}}" class="btn btn-light btn-sm login-btn">
                 <i class="fas fa-sign-in"></i>
                 ورود به حساب
             </a> --}}
-            <a href="{{route("login")}}" title="برای خروج از حساب کاربری کلیک کنید" class="btn btn-light btn-sm">
+
+            <a href="{{route("login")}}" class="btn btn-light btn-sm">
                 <i class="fas fa-user"></i>
                 سلام رضا عزیز - <span class="badge badge-dark">ادمین</span>    
             </a>
