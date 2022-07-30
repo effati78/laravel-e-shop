@@ -49,7 +49,8 @@ main {
     white-space: pre;
 }
 
-.login-btn i, .login-btn svg {
+.login-btn i,
+.login-btn svg {
     font-size: 1.2rem;
     position: relative;
     top: 5px;
@@ -58,4 +59,33 @@ main {
 
 .overflow-hidden {
     overflow: hidden;
+}
+
+ /* Sweet_Alert_2 */
+.swal2-icon {
+    font-size: 12px;
+}
+
+.swal2-title {
+    font-size: 0.9rem !important;
+}
+
+.swal2-content, .swal2-html-container {
+    font-size: 0.85rem !important;
+    direction: rtl !important;
+    text-align: center !important;
+}
+
+.swal2-content * {
+    direction: rtl !important;
+    text-align: center !important;
+}
+
+.swal2-actions button {
+    font-size: 0.7rem !important;
+}
+
+.swal2-popup {
+    width: 25em !important;
+    max-width: 100% !important;
 }

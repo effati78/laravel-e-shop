@@ -44,3 +44,12 @@ button[type="submit"], label {
 textarea {
     min-height: 150px;
 }
+
+.comments-registered {
+    display: none;
+}
+
+.form-control {
+    font-size: 0.8rem;
+    height: unset;
+}
