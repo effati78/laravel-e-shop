@@ -132,3 +132,41 @@ $(".post-comment").submit(function (e) {
         },
     });
 });
+
+$(".put-product").submit(function (e) {
+    e.preventDefault();
+
+    console.log($("#prd_title").val());
+    console.log($("#prd_content").val());
+    console.log($("#prd_image").val());
+    console.log($("#prd_price").val());
+    console.log( $("#prd_score").val());
+    console.log($("#prd_featured").is(':checked'));
+
+    fetch(product_url, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            title: $("#prd_title").val(),
+            content: $("#prd_content").val(),
+            image: $("#prd_image").val(),
+            price: $("#prd_price").val(),
+            score: $("#prd_score").val(),
+            isFeatured: $("#prd_featured").is(':checked'),
+        }),
+    })
+        .then((res) => res.json())
+        .then((json) => console.log(json));
+
+    // Swal.fire({
+    //     icon: "success",
+    //     title: "موفق!",
+    //     text: "محصول با موفقیت ویرایش شد.",
+    //     showConfirmButton: false,
+    //     timer: 5000,
+    //     timerProgressBar: true,
+    //     willClose: () => {
+    //         location.reload();
+    //     },
+    // });
+});
