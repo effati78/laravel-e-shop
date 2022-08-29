@@ -8,10 +8,14 @@ fetch("http://localhost:8000/api/sponsors")
         for (let i = 0; i < json.sponsors.length; i++) {
             sponsors_api += `<div class="col-3">
                                 <div class="card position-relative overflow-hidden" data-id="${json.sponsors[i].id}">
-                                    <div class="bg-light d-flex align-items-center justify-content-between py-2 px-3">
-                                        <button class="btn btn-sm btn-warning badge edit_prd" title="ویرایش" data-toggle="modal" data-target="#edit_prd"><i class="far fa-edit"></i> ویرایش</button>
-                                        <button class="btn btn-sm btn-danger badge delete_prd" title="حذف"><i class="far fa-trash-alt"></i> حذف</button>
-                                    </div>
+                                    
+                                    ${c_admin != '' ? 
+                                        `<div class="cardSpTrue bg-light d-flex align-items-center justify-content-between py-2 px-3">
+                                            <button class="btn btn-sm btn-warning badge edit_prd" title="ویرایش" data-toggle="modal" data-target="#edit_prd"><i class="far fa-edit"></i> ویرایش</button>
+                                            <button class="btn btn-sm btn-danger badge delete_prd" title="حذف"><i class="far fa-trash-alt"></i> حذف</button>
+                                        </div>` : '' 
+                                    }
+
                                     <div class="card-img">
                                         <img class="card-img-top img-fluid" src="${json.sponsors[i].img}"
                                             alt="Card image cap" />
@@ -125,3 +129,9 @@ $(".post-sponsors").submit(function (e) {
 });
 
 $(".sponsors").addClass("active");
+
+if (c_admin != "") {
+    $(".addSpTrue").show();
+} else {
+    $(".addSpTrue").hide();
+}

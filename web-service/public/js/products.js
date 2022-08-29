@@ -56,3 +56,9 @@ $(".post-product").submit(function (e) {
 });
 
 $('.home').addClass('active');
+
+if (c_admin != "") {
+    $(".addPrTrue").show();
+} else {
+    $(".addPrTrue").hide();
+}
