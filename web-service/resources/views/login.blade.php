@@ -13,10 +13,10 @@
                 <h5 class="text-center mb-4 text-white">ورود به حساب کاربری</h5>
                 <form action="#" method="post" class="login-form" autocomplete="off">
                     <div class="form-group">
-                        <input dir="auto" autofocus type="text" autocomplete="off" class="form-control" placeholder="ایمیل">
+                        <input required dir="auto" autofocus type="text" autocomplete="off" class="form-control" placeholder="ایمیل">
                     </div>
                     <div class="form-group">
-                        <input dir="auto" type="text" autocomplete="off" class="form-control" placeholder="رمز عبور">
+                        <input required dir="auto" type="text" autocomplete="off" class="form-control" placeholder="رمز عبور">
                     </div>
                     <div class="form-group text-center">
                         <button class="btn btn-login">ورود</button>
