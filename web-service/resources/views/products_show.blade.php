@@ -16,17 +16,17 @@
     <form class="row mb-5 px-0 post-comment" action="javascript:void(0)" method="POST">
         <div class="form-group col-6">
             <label>پروفایل:</label>
-            <input name="avatar" id="avatar" type="file" accept="image/*" class="form-control"
+            <input required name="avatar" id="avatar" type="file" accept="image/*" class="form-control"
                 placeholder="عکس پروفایل خود را وارد کنید">
         </div>
         <div class="form-group col-6">
             <label>نام و نام‌خانوادگی:</label>
-            <input name="name" id="name" type="text" class="form-control"
+            <input required name="name" id="name" type="text" class="form-control"
                 placeholder="نام و نام‌خانوادگی خود را وارد کنید">
         </div>
         <div class="form-group col-6">
             <label>ایمیل:</label>
-            <input name="email" id="email" type="email" class="form-control" placeholder="name@example.com">
+            <input required name="email" id="email" type="email" class="form-control" placeholder="name@example.com">
         </div>
         <div class="form-group col-6">
             <label>امتیاز شما به محصول:</label>
@@ -63,20 +63,20 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form class="row mb-5 px-0 put-product" action="javascript:void(0)" method="PUT">
+                    <form class="row px-0 put-product" action="javascript:void(0)" method="PUT">
                         <div class="form-group col-6">
                             <label>عکس محصول:</label>
-                            <input name="image" id="prd_image" type="file" accept="image/*" class="form-control"
+                            <input required name="image" id="prd_image" type="file" accept="image/*" class="form-control"
                                 placeholder="عکس محصول را وارد کنید">
                         </div>
                         <div class="form-group col-6">
                             <label>نام محصول:</label>
-                            <input name="title" id="prd_title" type="text" class="form-control"
+                            <input required name="title" id="prd_title" type="text" class="form-control"
                                 placeholder="نام محصول را وارد کنید">
                         </div>
                         <div class="form-group col-6">
                             <label>قیمت:</label>
-                            <input name="price" id="prd_price" type="text" class="form-control"
+                            <input required name="price" id="prd_price" type="text" class="form-control"
                                 placeholder="3,400,000 تومان">
                         </div>
                         <div class="form-group col-6">
@@ -95,7 +95,7 @@
                                 placeholder="ویژگی ها و توضیحاتی در مورد محصول وارد کنید" rows="3"></textarea>
                         </div>
                         <div class="form-group form-check col-12">
-                            <input name="isFeatured" type="checkbox" class="form-check-input" id="prd_featured">
+                            <input required name="isFeatured" type="checkbox" class="form-check-input" id="prd_featured">
                             <label class="form-check-label mr-4" for="prd_featured">محصول ویژه است</label>
                          </div>
                         <div class="col-12 d-flex align-items-center justify-content-end">
