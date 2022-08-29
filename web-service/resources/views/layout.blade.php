@@ -42,12 +42,12 @@
                 </div>
             </div>
             
-            {{-- <a href="{{route("login")}}" class="btn btn-light btn-sm login-btn">
+            <a href="{{route("login")}}" class="loginBtnFalse btn btn-light btn-sm login-btn">
                 <i class="fas fa-sign-in"></i>
                 ورود به حساب
-            </a> --}}
+            </a>
 
-            <a href="{{route("login")}}" class="btn btn-light btn-sm">
+            <a href="{{route("login")}}" class="loginBtnTrue btn btn-light btn-sm">
                 <i class="fas fa-user"></i>
                 سلام رضا عزیز - <span class="badge badge-dark">ادمین</span>    
             </a>
@@ -70,7 +70,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
     </script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/cookie.js"></script>
+    <script src="/js/layout.js"></script>
 
     @yield('site_js_files')
 </body>

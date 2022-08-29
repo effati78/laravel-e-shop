@@ -8,7 +8,7 @@
 
 @section('site_content')
     <div class="mb-4">
-        <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#new_prd"><i class="fad fa-plus-circle"></i> افزودن
+        <button class="addSpTrue btn btn-sm btn-primary" data-toggle="modal" data-target="#new_prd"><i class="fad fa-plus-circle"></i> افزودن
             حامی مالی</button>
     </div>
 

@@ -8,7 +8,7 @@
 
 @section('site_content')
     <div class="mb-4">
-        <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#new_prd"><i class="fad fa-plus-circle"></i> افزودن
+        <button class="addPrTrue btn btn-sm btn-primary" data-toggle="modal" data-target="#new_prd"><i class="fad fa-plus-circle"></i> افزودن
             محصول</button>
     </div>
 

@@ -13,7 +13,7 @@ body {
 .login-form input.form-control {
     outline: none;
     background-color: #f2f2f2;
-    padding: 24px 13px;
+    padding: 13px;
     border-radius: 0;
     font-size: 14px;
     transition: all 0.6s;

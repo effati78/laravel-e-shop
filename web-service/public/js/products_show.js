@@ -32,11 +32,13 @@ fetch(product_url)
                                     json.product.score
                                 }</h6>
                                 
-                                <hr />
-                                <div class="d-flex align-items-center justify-content-between admin-btnS">
-                                    <button class="btn btn-sm btn-warning" title="ویرایش" data-toggle="modal" data-target="#edit_prd"><i class="far fa-edit"></i> ویرایش</button>
-                                    <button class="btn btn-sm btn-danger delete_prd" title="حذف"><i class="far fa-trash-alt"></i> حذف</button>
-                                </div>
+                                ${c_admin != '' ? 
+                                        `<hr />
+                                        <div class="d-flex align-items-center justify-content-between admin-btnS">
+                                            <button class="btn btn-sm btn-warning" title="ویرایش" data-toggle="modal" data-target="#edit_prd"><i class="far fa-edit"></i> ویرایش</button>
+                                            <button class="btn btn-sm btn-danger delete_prd" title="حذف"><i class="far fa-trash-alt"></i> حذف</button>
+                                        </div>` : '' 
+                                    }
                             </div>
                         </div>`;
         product_cnt.html(product_api);
