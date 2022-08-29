@@ -9,23 +9,27 @@
 @section('site_content')
     <div class="container">
         <div class="row justify-content-center mt-5 pt-5">
-            {{-- <div class="col-md-5 col-11 p-5 form-box">
+            <div class="col-md-5 col-11 p-5 form-box loginFalse">
                 <h5 class="text-center mb-4 text-white">ورود به حساب کاربری</h5>
-                <form action="#" method="post" class="login-form" autocomplete="off">
+                <form action="#" class="login-form" autocomplete="off">
                     <div class="form-group">
-                        <input required dir="auto" autofocus type="text" autocomplete="off" class="form-control" placeholder="ایمیل">
+                        <input required dir="auto" autofocus type="email" autocomplete="off"
+                            class="email form-control" placeholder="ایمیل">
                     </div>
                     <div class="form-group">
-                        <input required dir="auto" type="text" autocomplete="off" class="form-control" placeholder="رمز عبور">
+                        <input required dir="auto" type="password" autocomplete="off" class="password form-control"
+                            placeholder="رمز عبور">
                     </div>
                     <div class="form-group text-center">
                         <button class="btn btn-login">ورود</button>
                     </div>
                 </form>
-            </div> --}}
+            </div>
 
-            <div class="col-md-5 col-11 p-5 form-box">
-                <p class="text-center mb-4 text-white">شما با نام کاربری <strong>رضا عفتی مقدم</strong> و نقش <strong>ادمین</strong> وارد سامانه شده‌اید.</p>
+            <div class="col-md-5 col-11 p-5 form-box loginTrue">
+                <p class="text-center mb-4 text-white">شما با نام کاربری <strong>رضا عفتی مقدم</strong> و نقش
+                    <strong>ادمین</strong> وارد سامانه شده‌اید.
+                </p>
                 <div class="d-flex align-items-center justify-content-center">
                     <a class="btn btn-danger btn-sm logout"><i class="fas fa-sign-out"></i>
                         خروج از حسا کاربری</a>
@@ -36,4 +40,5 @@
 @endsection
 
 @section('site_js_files')
+    <script src="/js/login.js"></script>
 @endsection
