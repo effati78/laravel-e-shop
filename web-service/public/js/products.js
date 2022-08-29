@@ -24,4 +24,35 @@ fetch('http://127.0.0.1:8000/api/products')
         products_cnt.html(products_api);
     });
 
+$(".post-product").submit(function (e) {
+    e.preventDefault();
+
+    fetch("http://localhost:8000/api/products", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            title: $("#prd_title").val(),
+            content: $("#prd_content").val(),
+            image: $("#prd_image").val(),
+            price: $("#prd_price").val(),
+            score: $("#prd_score").val(),
+            isFeatured: $("#prd_featured").is(':checked'),
+        }),
+    })
+        .then((res) => res.json())
+        .then((json) => console.log(json));
+
+    Swal.fire({
+        icon: "success",
+        title: "موفق!",
+        text: "محصول با موفقیت افزوده شد.",
+        showConfirmButton: false,
+        timer: 5000,
+        timerProgressBar: true,
+        willClose: () => {
+            location.reload();
+        },
+    });
+});
+
 $('.home').addClass('active');
