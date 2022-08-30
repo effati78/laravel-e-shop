@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Sponsor;
+use App\CustomClasses\FilesPatch;
+use App\CustomClasses\RenameFile;
 use Illuminate\Http\Request;
 
 class SponsorController extends Controller
@@ -18,7 +20,17 @@ class SponsorController extends Controller
         $sponsor = new Sponsor();
         $sponsor->name = $request->name;
         $sponsor->url = $request->url;
-        $sponsor->img = $request->img;
+
+        $absolutePatch = storage_path('app/public');
+        if (isset($request->img)) {
+            $image = $request->file('img');
+            $rename_image = new RenameFile($image);
+            $new_name_image = FilesPatch::getPatch('shop', 'sponsors') . $rename_image->createNewFileName();
+            
+            $sponsor->img = $new_name_image;
+            
+            $image->move($absolutePatch . FilesPatch::getPatch('shop', 'sponsors'), $new_name_image);
+        }
         $sponsor->save();
 
         return response()->json(["status" => 201, "success" => true, "message" => "Adding Sponsor Done"], 201);

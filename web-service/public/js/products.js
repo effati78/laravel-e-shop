@@ -10,7 +10,7 @@ fetch('http://127.0.0.1:8000/api/products')
                                     <p class="badge badge-warning">امتیاز ${json.products[i].score}</p>
                                     <div class="card-img">
                                         <img class="card-img-top img-fluid" src="${json.products[i].image_url}"
-                                            alt="Card image cap" />
+                                        onerror="this.onerror=null; this.src='/images/default.png'" alt="Card image cap" />
                                     </div>
                                     <div class="card-body">
                                         <h6 class="card-title text-ellipsis font-weight-bold">${json.products[i].title}</h6>
@@ -27,17 +27,11 @@ fetch('http://127.0.0.1:8000/api/products')
 $(".post-product").submit(function (e) {
     e.preventDefault();
 
+    let form = new FormData(this);
+
     fetch("http://localhost:8000/api/products", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            title: $("#prd_title").val(),
-            content: $("#prd_content").val(),
-            image: $("#prd_image").val(),
-            price: $("#prd_price").val(),
-            score: $("#prd_score").val(),
-            isFeatured: $("#prd_featured").is(':checked'),
-        }),
+        body: form,
     })
         .then((res) => res.json())
         .then((json) => console.log(json));

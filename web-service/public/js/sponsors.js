@@ -17,8 +17,8 @@ fetch("http://localhost:8000/api/sponsors")
                                     }
 
                                     <div class="card-img">
-                                        <img class="card-img-top img-fluid" src="${json.sponsors[i].img}"
-                                            alt="Card image cap" />
+                                        <img class="card-img-top img-fluid" src="/storage/${json.sponsors[i].img}"
+                                        onerror="this.onerror=null; this.src='/images/default.png'" alt="Card image cap" />
                                     </div>
                                     <div class="card-body">
                                         <h6 class="card-title text-ellipsis text-center">${json.sponsors[i].name}</h6>
@@ -103,14 +103,11 @@ $(".put-sponsors").submit(function (e) {
 $(".post-sponsors").submit(function (e) {
     e.preventDefault();
 
+    let form = new FormData(this);
+
     fetch("http://localhost:8000/api/sponsors", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            name: $("#spr_title").val(),
-            url: $("#spr_url").val(),
-            img: $("#spr_image").val(),
-        }),
+        body: form,
     })
         .then((res) => res.json())
         .then((json) => console.log(json));

@@ -29,7 +29,9 @@ a {
 }
 
 img {
-    width: 30px;
+    width: 30px !important;
+    height: auto !important;
+    object-fit: inherit !important;
 }
 
 h3 {
