@@ -10,7 +10,7 @@ fetch('http://127.0.0.1:8000/api/products/featured')
                                     <p class="badge badge-warning">امتیاز ${json.featured[i].score}</p>
                                     <div class="card-img">
                                         <img class="card-img-top img-fluid" src="${json.featured[i].image_url}"
-                                            alt="Card image cap" />
+                                            onerror="this.onerror=null; this.src='/images/default.png'" alt="Card image cap" />
                                     </div>
                                     <div class="card-body">
                                         <h6 class="card-title text-ellipsis font-weight-bold">${json.featured[i].title}</h6>

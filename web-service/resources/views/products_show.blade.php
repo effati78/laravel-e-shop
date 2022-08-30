@@ -95,7 +95,7 @@
                                 placeholder="ویژگی ها و توضیحاتی در مورد محصول وارد کنید" rows="3"></textarea>
                         </div>
                         <div class="form-group form-check col-12">
-                            <input required name="isFeatured" type="checkbox" class="form-check-input" id="prd_featured">
+                            <input name="isFeatured" type="checkbox" class="form-check-input" id="prd_featured">
                             <label class="form-check-label mr-4" for="prd_featured">محصول ویژه است</label>
                          </div>
                         <div class="col-12 d-flex align-items-center justify-content-end">

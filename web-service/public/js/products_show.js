@@ -10,7 +10,7 @@ fetch(product_url)
     .then(function (json) {
         product_api = `<div class="col-12 row p-2 bg-white border rounded">
                             <div class="col-md-3"><img class="img-fluid img-responsive rounded product-image"
-                                    src="${json.product.image_url}"></div>
+                                    src="${json.product.image_url}" onerror="this.onerror=null; this.src='/images/default.png'"></div>
                             <div class="col-md-6 mt-1">
                                 <h5 class="font-weight-bold mb-3">${
                                     json.product.title
@@ -55,7 +55,7 @@ fetch(comment_url)
         for (let i = 0; i < json.comments.length; i++) {
             comments_api += `<div class="col-12 row p-2 bg-white border rounded">
                                 <div class="avatar"><img class="img-fluid img-responsive rounded product-image"
-                                        src="${json.comments[i].sender_avatar}"></div>
+                                        src="${json.comments[i].sender_avatar}" onerror="this.onerror=null; this.src='/images/user.jpeg'"></div>
                                 <div class="col-md-6 mt-1">
                                     <h5 class="font-weight-bold">${json.comments[i].sender_name}</h5>
                                     <p class="text-justify para mb-0 font-md">${json.comments[i].comment}</p>
@@ -108,16 +108,11 @@ $(document).on("click", ".delete_prd", function (e) {
 $(".post-comment").submit(function (e) {
     e.preventDefault();
 
+    let form = new FormData(this);
+
     fetch(comment_url, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            name: $("#name").val(),
-            email: $("#email").val(),
-            avatar: $("#avatar").val(),
-            score: $("#score").val(),
-            comment: $("#comment").val(),
-        }),
+        body: form,
     })
         .then((res) => res.json())
         .then((json) => console.log(json));
