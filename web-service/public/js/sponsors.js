@@ -101,7 +101,7 @@ $(".put-sponsors").submit(function (e) {
         timer: 5000,
         timerProgressBar: true,
         willClose: () => {
-            // location.reload();
+            location.reload();
         },
     });
 });
