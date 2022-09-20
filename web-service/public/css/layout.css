@@ -120,3 +120,7 @@ img {
     height: 100% !important;
     object-fit: cover !important;
 }
+
+.img-fluid.img-responsive.rounded.product-image {
+    object-fit: contain !important;
+}
