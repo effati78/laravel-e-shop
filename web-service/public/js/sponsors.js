@@ -7,22 +7,32 @@ fetch("http://localhost:8000/api/sponsors")
     .then(function (json) {
         for (let i = 0; i < json.sponsors.length; i++) {
             sponsors_api += `<div class="col-3">
-                                <div class="card position-relative overflow-hidden" data-id="${json.sponsors[i].id}">
+                                <div class="card position-relative overflow-hidden" data-id="${
+                                    json.sponsors[i].id
+                                }">
                                     
-                                    ${c_admin != '' ? 
-                                        `<div class="cardSpTrue bg-light d-flex align-items-center justify-content-between py-2 px-3">
+                                    ${
+                                        c_admin != ""
+                                            ? `<div class="cardSpTrue bg-light d-flex align-items-center justify-content-between py-2 px-3">
                                             <button class="btn btn-sm btn-warning badge edit_prd" title="ویرایش" data-toggle="modal" data-target="#edit_prd"><i class="far fa-edit"></i> ویرایش</button>
                                             <button class="btn btn-sm btn-danger badge delete_prd" title="حذف"><i class="far fa-trash-alt"></i> حذف</button>
-                                        </div>` : '' 
+                                        </div>`
+                                            : ""
                                     }
 
                                     <div class="card-img">
-                                        <img class="card-img-top img-fluid" src="/storage/${json.sponsors[i].img}"
+                                        <img class="card-img-top img-fluid" src="/storage/${
+                                            json.sponsors[i].img
+                                        }"
                                         onerror="this.onerror=null; this.src='/images/default.png'" alt="Card image cap" />
                                     </div>
                                     <div class="card-body">
-                                        <h6 class="card-title text-ellipsis text-center">${json.sponsors[i].name}</h6>
-                                        <a href="${json.sponsors[i].url}" class="btn-sm btn btn-primary w-100 mt-2">مشاهده سایت</a>
+                                        <h6 class="card-title text-ellipsis text-center">${
+                                            json.sponsors[i].name
+                                        }</h6>
+                                        <a href="${
+                                            json.sponsors[i].url
+                                        }" class="btn-sm btn btn-primary w-100 mt-2">مشاهده سایت</a>
                                     </div>
                                 </div>
                             </div>`;
@@ -75,14 +85,10 @@ $(document).on("click", ".delete_prd", function (e) {
 $(".put-sponsors").submit(function (e) {
     e.preventDefault();
 
+    let form = new FormData(this);
     fetch(sponsors_url, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            name: $("#prd_title").val(),
-            url: $("#prd_url").val(),
-            img: $("#prd_image").val(),
-        }),
+        method: "POST",
+        body: form,
     })
         .then((res) => res.json())
         .then((json) => console.log(json));
@@ -95,7 +101,7 @@ $(".put-sponsors").submit(function (e) {
         timer: 5000,
         timerProgressBar: true,
         willClose: () => {
-            location.reload();
+            // location.reload();
         },
     });
 });

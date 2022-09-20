@@ -26,9 +26,9 @@ class SponsorController extends Controller
             $image = $request->file('img');
             $rename_image = new RenameFile($image);
             $new_name_image = FilesPatch::getPatch('shop', 'sponsors') . $rename_image->createNewFileName();
-            
+
             $sponsor->img = $new_name_image;
-            
+
             $image->move($absolutePatch . FilesPatch::getPatch('shop', 'sponsors'), $new_name_image);
         }
         $sponsor->save();
@@ -47,9 +47,23 @@ class SponsorController extends Controller
     public function edit_sponsor(Request $request, $id)
     {
         $sponsor = Sponsor::findORFail($id);
-        $sponsor->name = $request->name;
-        $sponsor->url = $request->url;
-        $sponsor->img = $request->img;
+        $sponsor->update([
+            'name' => $request->name,
+            'url' => $request->url,
+        ]);
+
+        $absolutePatch = storage_path('app/public');
+        if (isset($request->img)) {
+            $image = $request->file('img');
+            $rename_image = new RenameFile($image);
+            $new_name_image = FilesPatch::getPatch('shop', 'sponsors') . $rename_image->createNewFileName();
+
+            $sponsor->update([
+                'img' => $new_name_image,
+            ]);
+
+            $image->move($absolutePatch . FilesPatch::getPatch('shop', 'sponsors'), $new_name_image);
+        }
         $sponsor->save();
 
         return response()->json(["status" => 200, "success" => true, "message" => "Editing Sponsor Done"], 200);
