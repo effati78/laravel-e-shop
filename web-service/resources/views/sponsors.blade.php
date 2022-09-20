@@ -8,7 +8,8 @@
 
 @section('site_content')
     <div class="mb-4">
-        <button class="addSpTrue btn btn-sm btn-primary" data-toggle="modal" data-target="#new_prd"><i class="fad fa-plus-circle"></i> افزودن
+        <button class="addSpTrue btn btn-sm btn-primary" data-toggle="modal" data-target="#new_prd"><i
+                class="fad fa-plus-circle"></i> افزودن
             حامی مالی</button>
     </div>
 
@@ -25,7 +26,9 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form class="row px-0 put-sponsors" action="javascript:void(0)" method="PUT">
+                    <form class="row px-0 put-sponsors" action="javascript:void(0)" method="post"
+                        enctype="multipart/form-data">
+                        @method('PUT')
                         <div class="form-group col-6">
                             <label>عکس حامی:</label>
                             <input required name="img" id="prd_image" type="file" accept="image/*"
