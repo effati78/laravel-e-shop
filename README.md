@@ -25,13 +25,13 @@ For better understanding, please read [this file](https://github.com/effati78/RE
 
 ## Usage
 
-```
+```cmd
 $ git clone https://github.com/effati78/REST_API.git
 $ cd web-service
 $ composer install
 ```
 Add the project database from the database folder
-```
+```bash
 $ php artisan serve
 ```
 
