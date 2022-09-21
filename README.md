@@ -16,11 +16,12 @@ For better understanding, please read [this file](https://github.com/effati78/RE
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
-![laravel](https://img.shields.io/badge/laravel-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![mySql](https://img.shields.io/badge/mysql-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![laravel](https://img.shields.io/badge/laravel-%23777BB4.svg?style=for-the-badge&logo=laravel&logoColor=white)
+![mySql](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Sweetalert](https://img.shields.io/badge/Sweetalert.js-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![fontawesome](https://img.shields.io/badge/fontawesome-%23323330.svg?style=for-the-badge&logo=fontawesome)
+![fontawesome](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 
 ## Usage
 
