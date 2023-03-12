@@ -26,7 +26,8 @@ For better understanding, please read [this file](https://github.com/effati78/RE
 ## Usage
 
 ```cmd
-$ git clone https://github.com/effati78/REST_API.git
+$ git clone https://github.com/effati78/laravel-e-shop.git
+$ cd laravel-e-shop
 $ cd web-service
 $ composer install
 ```
